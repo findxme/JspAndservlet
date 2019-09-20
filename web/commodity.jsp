@@ -33,7 +33,7 @@
 
     <c:forEach var="dbSupermarket" items="${applies}">
         <tr>
-
+            <form class="form-horizontal" action="updateEmp.do" method="post">
                 <td class="col-md-1"><input type="text" class="form-control " placeholder="用户名" name="GID" readonly value="${dbSupermarket.GId}"></td>
                 <td class="col-md-1"><input type="text" class="form-control " placeholder="姓名" name="GNAME"  value="${dbSupermarket.GNAME}"></td>
                 <td class="col-md-1"><input type="text" class="form-control " placeholder="密码" name="GPRICE"  value="${dbSupermarket.GPRICE}"></td>
@@ -43,7 +43,7 @@
                     <a type="button" href="selectOne.do?GID=${dbSupermarket.GId}&name=${dbSupermarket.GNAME}" class="btn btn-default" >详情</a>
                     <a href="deleteEmp.do?deleteId=${dbSupermarket.GId}" class="btn btn-danger" type="button">删除</a>
                 </td>
-
+            </form>
         </tr>
     </c:forEach>
 
